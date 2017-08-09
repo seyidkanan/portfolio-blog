@@ -8,3 +8,4 @@ Used libs:
 * javax.servlet.jstl 1.2
 * Hibernate 5.0.12.FINAL
 
+Template taken from here - https://bootstrapthemes.co/item/devblog-personal-blog-template/
