@@ -63,7 +63,7 @@
                         <div id="menu" class="collapse">
                             <ul class="menu-link">
                                 <li><a href="about.jsp">About</a></li>
-                                <li><a href="work.jsp">Work</a></li>
+                                <li><a href="admin.jsp">Work</a></li>
                                 <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </div>
@@ -199,7 +199,7 @@
                         <ul class="menu-link">
                             <li><a href="welcome.jsp">Home</a></li>
                             <li><a href="about.jsp">About</a></li>
-                            <li><a href="work.jsp">Work</a></li>
+                            <li><a href="admin.jsp">Work</a></li>
                             <li><a href="contact.jsp">Contact</a></li>
                         </ul>
 

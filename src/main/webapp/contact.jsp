@@ -65,7 +65,7 @@
                         <div id="menu" class="collapse">
                             <ul class="menu-link">
                                 <li><a href="about.jsp">About</a></li>
-                                <li><a href="work.jsp">Work</a></li>
+                                <li><a href="admin.jsp">Work</a></li>
                                 <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </div>
@@ -125,7 +125,7 @@
 
                                 <!-- Testimonials Start -->
                                 <div class="post-title margin-top-50">
-                                    <h2>I hope you've checked <a href="work.jsp" data-toggle="tooltip" data-placement="top" title="Check out my work.">my work</a>, Let's take a look on what other clients said about my work.</h2>
+                                    <h2>I hope you've checked <a href="admin.jsp" data-toggle="tooltip" data-placement="top" title="Check out my work.">my work</a>, Let's take a look on what other clients said about my work.</h2>
                                 </div>
 
 
@@ -315,7 +315,7 @@
                         <ul class="menu-link">
                             <li><a href="welcome.jsp">Home</a></li>
                             <li><a href="about.jsp">About</a></li>
-                            <li><a href="work.jsp">Work</a></li>
+                            <li><a href="admin.jsp">Work</a></li>
                             <li><a href="contact.jsp">Contact</a></li>
                         </ul>
 
