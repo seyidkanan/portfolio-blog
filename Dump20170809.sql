@@ -67,7 +67,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES (1,'Qaqamzor :)','Seyid-Kanan Bagirov');
+INSERT INTO `user_info` VALUES (1,'Lorem Impus','Seyid-Kanan Bagirov');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
