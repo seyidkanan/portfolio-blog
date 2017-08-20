@@ -1,6 +1,10 @@
 package az.kanan.Test.blog.model;
 
+
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by Kanan on 7/15/2017.
@@ -9,13 +13,17 @@ import javax.persistence.*;
 @Table(name = "user_info")
 public class User {
     @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     @Column(name = "user_id")
     private Long id;
 
     @Column(name = "user_name_surname")
+    @NotNull
     private String nameAndSurname;
 
     @Column(name = "user_desc")
+    @NotNull
     private String desc;
 
     public User() {

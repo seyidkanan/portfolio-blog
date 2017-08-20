@@ -64,7 +64,7 @@
                             <ul class="menu-link">
                                 <li><a href="about.jsp">About</a></li>
                                 <li><a href="admin.jsp">Work</a></li>
-                                <li><a href="contact.jsp">Contact</a></li>
+                                <li><a href="error.jsp">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
 
                         <div class="sub-title">
                             <h2>About Me</h2>
-                            <a href="contact.jsp"><i class="icon-envelope"></i></a>
+                            <a href="error.jsp"><i class="icon-envelope"></i></a>
                         </div>
 
 
@@ -164,7 +164,7 @@
                             </div>
 
                             <div class="col-md-12 text-center">
-                                <a href="contact.jsp" data-toggle="tooltip" data-placement="top" title="Visit on my contact page for hire me." class="load-more-button">Hire</a>
+                                <a href="error.jsp" data-toggle="tooltip" data-placement="top" title="Visit on my contact page for hire me." class="load-more-button">Hire</a>
                             </div>
 
                         </div>
@@ -200,7 +200,7 @@
                             <li><a href="welcome.jsp">Home</a></li>
                             <li><a href="about.jsp">About</a></li>
                             <li><a href="admin.jsp">Work</a></li>
-                            <li><a href="contact.jsp">Contact</a></li>
+                            <li><a href="error.jsp">Contact</a></li>
                         </ul>
 
                         <p>© Copyright 2016 DevBlog. All rights reserved</p>
