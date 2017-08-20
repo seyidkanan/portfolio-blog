@@ -67,14 +67,14 @@
             </div>
             <div class="modal-body">
                 <%--input--%>
+                <div>
+                    <div id="error_message_user" style="display: none">
 
-                <div class="alert alert-danger" id="error_message_user" role="alert" aria-hidden="true"
-                     style="display: none">
+                    </div>
 
-                </div>
-
-                <div class="alert alert-success" role="alert" id="success_message_user" style="display: none">
-                    User added!!!
+                    <div id="success_message_user" style="display: none">
+                        User added!!!
+                    </div>
                 </div>
 
                 <div class="input-group">
@@ -186,8 +186,10 @@
             if (xhr.readyState == 4) {
                 var response = JSON.parse(xhr.responseText);
                 if (response["status"] == 5) {
+                    console.log(response["status"]);
                     add_error_message_2_div(response["error"]);
                 } else if (response["status"] == 200) {
+                    console.log(response["status"]);
                     show_success_message();
                 }
             }
@@ -195,11 +197,15 @@
 
 
         function add_error_message_2_div(error_string) {
-            $('#error_message_user').append(error_string);
+            var div = document.getElementById('error_message_user');
+            div.innerHTML += error_string;
+            div.style.display = 'inline';
         }
 
         function show_success_message() {
-            $('#success_message_user').show();
+//            $('#success_message_user').show();
+            document.getElementById('success_message_user').style.display = 'inline';
+            //$("#success_message_user").alert()
         }
 
         xhr.send(body);
@@ -288,7 +294,30 @@
     }
 
     function edit_user(id) {
-        console.log("id user =" + id);
+//        console.log("id user =" + id);
+        //get user data
+        get_user_by_id(id);
+        //put into windows
+
+
+    }
+
+    function get_user_by_id(id) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "http://localhost:8181/user/" + id, true);
+        xhr.withCredentials = false;
+        xhr.send();
+        xhr.onreadystatechange = processRequest;
+        function processRequest(e) {
+            //show_loader();
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                parse_user_data(response);
+                //hide_loader();
+            }// else {
+            //console.log("error: " + e);
+            //}
+        }
     }
 
     function edit_post(id) {

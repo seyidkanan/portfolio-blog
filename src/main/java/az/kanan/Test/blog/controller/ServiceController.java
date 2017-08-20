@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 import az.kanan.Test.blog.model.ResponseStatus;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -73,7 +74,7 @@ public class ServiceController {
 
     @RequestMapping(value = "/user_list", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
-    public List<User> userData(Model model) {
+    public List<User> getUserList(Model model) {
         List<User> userList = userService.findAll();
         return userList;
     }
@@ -81,7 +82,7 @@ public class ServiceController {
     @RequestMapping(value = "/user/add", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public az.kanan.Test.blog.model.ResponseStatus addUser(@RequestBody User user) {
-        System.out.println(user);
+        //System.out.println(user);
 
         boolean isRequestOkey = true;
 
@@ -109,9 +110,24 @@ public class ServiceController {
             responseStatus.setError("Fields are empty");
         }
 
-        System.out.println(responseStatus);
+        //System.out.println(responseStatus);
 
         return responseStatus;
+    }
+
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getUserData(@PathVariable("id") Long id) {
+        System.out.println("id = " + id);
+        User user = userService.findUserById(id);
+        if (user != null) {
+            return user;
+        } else {
+            ResponseStatus responseStatus = new ResponseStatus();
+            responseStatus.setStatus(6);
+            responseStatus.setError("Cannot Find User");
+            return responseStatus;
+        }
     }
 
 
